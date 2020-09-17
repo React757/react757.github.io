@@ -27,9 +27,9 @@ const Country = (props) => {
                         
                     
                                <li className="borders-item" >
-            <Link to= {props.borders} className="navLink">
+            
                 <button className="btn btn--borders">{props.borders}</button>
-            </Link>
+          
                                </li>
                                 
 
