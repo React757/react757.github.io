@@ -1,0 +1,11 @@
+.main {
+    &--error {
+        margin-top: auto;
+        display: flex;
+        justify-content: center;
+
+        h1 {
+            font-size: calc(2.5rem + 2vw);
+        }
+    }
+}

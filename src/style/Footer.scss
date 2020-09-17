@@ -1,0 +1,25 @@
+@import '../style/App.scss';
+
+.footer {
+    text-align: center;
+    background-color: $white;
+    box-shadow: 1rem 1rem 4rem rgba($veryDarkBlue, .1);
+    padding: 2rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-top: auto;
+
+    &__link {
+
+        &:visited,
+        &:link,
+        &:active {
+            color: red;
+        }
+
+        &:hover,
+        &:focus {
+            filter: brightness(55%);
+        }
+    }
+}

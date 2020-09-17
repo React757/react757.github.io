@@ -1,0 +1,39 @@
+@import "../style/App.scss";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+    box-shadow: 1rem 1rem 4rem rgba($veryDarkBlue, .1);
+    min-height: 8.5rem;
+    max-height: 8.5rem;
+
+    &__logo {
+        padding: 2rem 3rem;
+        font-size: 2.5rem;
+    }
+
+    &__darkLightMode {
+        display: flex;
+        align-items: center;
+        padding: 0rem 3rem;
+        cursor: pointer;
+    }
+
+    &__change-input {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    &__icon-moon {
+        transform: rotate(90deg);
+    }
+
+    &__mode-name {
+        padding-left: 1rem;
+        font-size: 1.3rem;
+        font-weight: 800;
+    }
+}

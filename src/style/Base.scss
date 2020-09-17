@@ -1,0 +1,68 @@
+/*
+Color Variables
+*/
+$darkBlue: hsl(209, 23%, 22%); //(Dark Mode Elements)
+$veryDarkBlue: hsl(207, 26%, 17%); //(Dark Mode Background)
+$veryDarkBlue2: hsl(200, 15%, 8%); //(Light Mode Text)
+$darkGray: hsl(0, 0%, 52%); //(Light Mode Input)
+$veryLightGray: hsl(0, 0%, 98%); //(Light Mode Background)
+$white: hsl(0, 0%, 100%); //(Dark Mode Text & Light Mode Elements)
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    text-decoration: none;
+    list-style: none;
+}
+
+*:visited,
+*:link,
+*:active {
+    color: $veryDarkBlue2;
+}
+
+*:focus {
+    outline: none !important; //usunięcie niebieskiego obromowania w chrome przy wcisnieciu przycisku
+}
+
+
+.btn {
+    border: 0px;
+    background-color: $white;
+    border: 0;
+    border-radius: .3rem;
+    box-shadow: 0rem 0rem .5rem .2rem rgba($veryDarkBlue, .40);
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    transition: ease-in-out .5s;
+
+    &:hover {
+        box-shadow: 0rem 0rem .5rem .2rem rgba($veryDarkBlue, .9);
+    }
+
+    &:focus {
+        box-shadow: inset 0rem 0rem .5rem .2rem rgba($veryDarkBlue, .9);
+    }
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5%, 1rem = 10px
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $veryLightGray;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+}
