@@ -18,6 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+    "start": "webpack-dev-server --devtool eval-source-map --host 0.0.0.0 --disable-host-check --open",
+    "build": "webpack -p"
   },
   "eslintConfig": {
     "extends": "react-app"
