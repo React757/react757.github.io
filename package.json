@@ -27,6 +27,16 @@
     "babel-loader": "^8.0.6",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11"
+   },
+    "eslintConfig": {
+    "extends": "react-app"
+   },
+   "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+   ]
   }
 }
 
