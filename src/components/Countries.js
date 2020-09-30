@@ -14,7 +14,7 @@ const Countries = (props) => {
             <div className="countryCard" key={index}>
                 <div className="countryCard__flag">
                     
-      <img className= "countryCard__flagImg" src= {item.image} alt= ${item.question} />
+      <img className= "countryCard__flagImg" src= {item.image} alt= {item.question} />
                    
                 </div>
                 <div className="countryCard__description">
