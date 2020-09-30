@@ -14,7 +14,7 @@ const Countries = (props) => {
             <div className="countryCard" key={index}>
                 <div className="countryCard__flag">
                      <object data= {item.image} type="image/png">
-      <img className= "countryCard__flagImg" src="https://as2.ftcdn.net/jpg/02/58/18/55/500_F_258185506_aaXtZySrasoDZ6lCmq8YDrUz21A6Gc7g.jpg" alt= ${item.question} >
+      <img className= "countryCard__flagImg" src="https://as2.ftcdn.net/jpg/02/58/18/55/500_F_258185506_aaXtZySrasoDZ6lCmq8YDrUz21A6Gc7g.jpg" alt= {`${item.question} flag`} >
                      </object>
                 </div>
                 <div className="countryCard__description">
