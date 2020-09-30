@@ -11,6 +11,8 @@ const Countries = (props) => {
             className="countryCard__flagImg"
             src={item.image}
             alt={item.question}
+            onError={(e)=>{e.target.onerror = null;
+              e.target.src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_News_icon.svg/200px-Google_News_icon.svg.png"}}
           />
         </div>
         <div className="countryCard__description">
