@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import '../style/Countries.scss'
 
 const Countries = (props) => {
-  const countries = props.itemsAll.map((item, index) => (
+  const countries = props.itemsAll.slice(0).reverse().map((item, index) => (
     <Link to={{ pathname: `/${item.answer}`, state: { item: item.answer } }}>
       <div className="countryCard" key={index}>
         <div className="countryCard__flag">
