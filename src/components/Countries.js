@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import '../style/Countries.scss'
 
 const Countries = (props) => {
-  const countries = props.itemsAll.map((item, index) => (
+  const countries = props.itemsAll.slice(0).reverse().map((item, index) => (
     <Link to={{ pathname: `/${item.answer}`, state: { item: item.answer } }}>
       <div className="countryCard" key={index}>
         <div className="countryCard__flag">
@@ -11,6 +11,8 @@ const Countries = (props) => {
             className="countryCard__flagImg"
             src={item.image}
             alt={item.question}
+            onError={(e)=>{e.target.onerror = null;
+              e.target.src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_News_icon.svg/200px-Google_News_icon.svg.png"}}
           />
         </div>
         <div className="countryCard__description">
