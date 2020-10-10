@@ -39,7 +39,7 @@
         grid-template-columns: minmax(10rem, 55rem);
         grid-template-areas: "flag""info";
         justify-content: center;
-        gap: 5rem;
+        gap: 1rem;
     }
 
     &__flag {
@@ -78,24 +78,10 @@
         }
     }
 
-    &__info {
-        grid-area: info;
-        display: grid;
-        grid-template-columns: 30rem 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: ". .""infoPartOne infoPartTwo""infoPartThree infoPartThree";
-        row-gap: 1.5rem;
-        align-items: center;
-
-        @media only screen and (max-width: 1100px) {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-areas: ". .""infoPartOne infoPartOne""infoPartTwo infoPartTwo""infoPartThree infoPartThree";
-        }
-    }
 
     &__headingPrimary {
-        font-size: calc(1rem + .96vw);
-        white-space: nowrap;
+        font-size: calc(0 + .96vw);
+        white-space: wrap;
 
         @media only screen and (max-width: 1100px) {
             padding-bottom: 1rem;
@@ -114,10 +100,6 @@
     padding-bottom: 1rem;
     font-weight: 600;
 
-    &:not(:last-child) {
-        padding-right: 1rem;
-    }
-
 }
 
 .info-list {
@@ -130,30 +112,6 @@
     &--partOne {
         grid-area: infoPartOne;
     }
-
-    &--partTwo {
-        grid-area: infoPartTwo;
-    }
-
-    &--partThree {
-        grid-area: infoPartThree;
-        padding-top: 2rem;
-    }
-
-    &__domain {
-        display: flex;
-    }
-
-    &__curriences {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    &__languages {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
 
     &__borders {
 
@@ -168,7 +126,7 @@
         }
 
         @media only screen and (max-width: 1100px) {
-            gap: 4rem;
+            gap: 1rem;
 
             h4 {
                 width: 100%;
@@ -178,13 +136,9 @@
 
 }
 
-.borders-item {
-    padding: 0 1rem 1rem 0;
-}
-
 .btn {
     &--borders {
-        padding: .5rem 3rem;
+        padding: .5rem 5rem;
 
         @media only screen and (max-width: 1100px) {
             font-size: calc(1rem + 1vw);
