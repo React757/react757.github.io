@@ -19,7 +19,7 @@
 
 .countryCard {
     display: grid;
-    grid-template-rows: repeat(2, minmax(10rem, 20rem));
+    grid-template-rows: repeat(1, minmax(15rem, 15rem));
     border-radius: 1%;
     overflow: hidden;
     background-color: $white;
@@ -32,7 +32,7 @@
     }
 
     @media only screen and (max-width: 686px) {
-        grid-template-rows: 23rem minmax(10rem, 20rem);
+        grid-template-rows: 23rem minmax(20rem, 20rem);
     }
 
     &__flag {
@@ -45,12 +45,6 @@
         object-fit: cover;
         object-position: center;
 
-    }
-
-    &__757description {
-        grid-row: 2/3;
-        padding: 1rem;
-        border-top: 1px solid $darkBlue;
     }
     
     &__description {

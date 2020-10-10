@@ -1,7 +1,7 @@
 {
-  "homepage": "https://757live.github.io/",
-  "name": "countries",
-  "version": "0.1.0",
+  "homepage": "https://react757.github.io/",
+  "name": "react757",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "gh-pages": "^2.2.0",
@@ -9,7 +9,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "2.1.8"
+    "react-scripts": "^3.4.3"
   },
   "scripts": {
     "predeploy": "npm run build",

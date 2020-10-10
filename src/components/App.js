@@ -2,25 +2,13 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Header from '../components/Header'
 import Home from '../components/Home'
-import Country from '../components/Country'
+import Country from '../components/NewsDetail'
 import Footer from '../components/Footer'
 import WrongPage from '../components/WrongPage'
 import '../style/App.scss'
 
 class App extends Component {
-  /* https://restcountries.eu/ */
-  /* ALL  https://restcountries.eu/rest/v2/all */
-  /* Name - Search by country name. It can be the native name or partial name
-  https://restcountries.eu/rest/v2/name/{name}, https://restcountries.eu/rest/v2/name/united 
-  */
-  /* Full Name - Search by country full name
-  https://restcountries.eu/rest/v2/name/{name}?fullText=true
-  https://restcountries.eu/rest/v2/name/aruba?fullText=true
-  */
-  /* Region - Search by region: Africa, Americas, Asia, Europe, Oceania
-  https://restcountries.eu/rest/v2/region/{region}
-  https://restcountries.eu/rest/v2/region/europe
-  */
+  
 
   state = {
     itemsAll: [],
@@ -61,7 +49,7 @@ class App extends Component {
               answer={item.answer}
             />
           </main>
-        )} //zeby country wyswietlalo odpowiednie panstwo zwiazane z linkiem
+        )} 
       />
     ))
     return (

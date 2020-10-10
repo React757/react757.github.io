@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as NavLink } from 'react-router-dom'
-import Countries from '../components/Countries'
+import News from '../components/News'
 import '../style/Home.scss'
 class Home extends Component {
   state = {
@@ -38,9 +38,7 @@ class Home extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.option !== this.state.option) {
-      //warunek jest po to, żeby fetch się zmieniał jeśli została wybrana opcja all to niech nie dodaje region, tylko opcje, żeby wyszło
-      //https://restcountries.eu/rest/v2/all, a jeśli została wybrana jakakolwiek inna opcja to niech doda region i wybrana opcje, żeby
-      //wyszło https://restcountries.eu/rest/v2/region/europe
+      
       fetch(
         `https://mnrlive.github.io/api/resources.json?${
           this.state.option === 'all' ? '' : 'region/'
@@ -56,7 +54,7 @@ class Home extends Component {
         .then((response) => response.json())
         .then((data) => {
           this.setState({
-            filtered: '', //wyczysc tablice filtered, jesli jest ona pusta to wyswietla sie wszystkie opcje z danej kategorii (wiaze sie z inputem, czyli jesli wybiore jakas opcje to wyzeruj tablice filtered i wartosc z input)
+            filtered: '', 
             itemsAll: data.item,
             isLoaded: true,
           })
@@ -83,14 +81,14 @@ class Home extends Component {
     }
   }
 
-  //Toggle, jesli uzytkownik kliknie na Filter By Region to niech filter activ zmieni sie na true, jesli kliknie ponownie to na false
+
   handleFilterRegion = () => {
     this.setState({
       filterActive: !this.state.filterActive,
     })
   }
 
-  //sluzy do zamkniecia dropdown listy zwiazanej z filtrowaniej jesli jest ona otwarta i uzytkownik kliknie w obszar diva homa
+  
   handleCloseGlobalFilterRegion = () => {
     if (this.state.filterActive === true) {
       this.setState({
@@ -99,7 +97,7 @@ class Home extends Component {
     }
   }
 
-  //Pobranie wartosci kliknietej opcji w dropdown list, ustawienie stanu, jesli opcja zostanie wybrana to filterActive bedzie ustawiony na false w celu zamkniecia dropDown listy, regionChoosed zostaje ustawiony na true, w celu uzycia warunku, ktory zastapi Filter By Region wybrana opcja
+  
   handleChangeRegion = (e) => {
     let value = e.currentTarget.getAttribute('value')
     let valueUpper =
@@ -128,7 +126,7 @@ class Home extends Component {
               >
                 {this.state.regionChoosed
                   ? this.state.optionUpper
-                  : 'Filter by Region'}
+                  : 'Filter by Category'}
               </span>
               <ul
                 className={
@@ -197,10 +195,10 @@ class Home extends Component {
             </NavLink>
           </div>
         </div>
-        {/* Warunek 1 jeśli dane jeszcze się nie załadowały, to niech wyświetli się napis Loading */}
-        {/* Warunek 2 jeśli tablica pofiltrowana jest pusta (bo nic nie ma w inpucie, bądź została wybrana jakaś opcja z droplisty) to wyświetl tablicę countries (czyli bezpośrednio z api), jeśli filtered nie jest puste to wyświetl kraje pofiltrowane */}
+        {}
+        {}
         {this.state.isLoaded ? (
-          <Countries
+          <News
             itemsAll={
               this.state.filtered === ''
                 ? this.state.itemsAll
