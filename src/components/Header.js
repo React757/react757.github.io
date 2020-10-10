@@ -19,7 +19,7 @@ class Header extends Component {
       <>
         {this.state.darkMode ? <style>{this.darktStyle}</style> : null}
         <header className="header">
-          <h1 className="header__logo">757Live Network?</h1>
+          <h1 className="header__logo">757Live Network</h1>
           <div className="header__changeMode">
             <input
               className="header__change-input"
